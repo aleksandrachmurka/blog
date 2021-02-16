@@ -23,7 +23,7 @@ const Main = ({ location }) => {
           Mamy wpływ na jakość naszego życia i to przekazuję ludziom. Zaś moje
           motto życiowe to{" "}
           <span style={{ fontWeight: "bold", color: "orange" }}>
-            „żyj zdrowo, aby żyć kolorowo”
+            żyj zdrowo, aby żyć kolorowo
           </span>
           .
         </p>
