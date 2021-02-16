@@ -1,89 +1,53 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-
-import Bio from "../components/bio"
 import Layout from "../components/layout"
+import { Link } from "gatsby"
 import SEO from "../components/seo"
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
-
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <SEO title="All posts" />
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
+const Main = ({ location }) => {
+  const siteTitle = `Title`
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
-      <Bio />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
-
-          return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
-          )
-        })}
-      </ol>
+      <SEO title="Strona główna" />
+      <div className="main-content">
+        <p>Witam Cię na mojej stronie internetowej!</p>
+        <p>
+          Moją misją jest wzbudzenie świadomości w ludziach na temat ich zdrowia
+          i dobrego samopoczucia.
+        </p>
+        <p>
+          Chciałabym, aby każdy czuł się dobrze w swoim ciele bez względu na
+          wiek, wagę czy płeć.
+        </p>
+        <p>
+          Mamy wpływ na jakość naszego życia i to przekazuję ludziom. Zaś moje
+          motto życiowe to <b>„żyj zdrowo, aby żyć kolorowo”</b>.
+        </p>
+        <p>
+          Więcej informacji o mnie znajdziesz
+          <Link to="/about" className="main-content__link">
+            tutaj
+          </Link>
+          .
+        </p>
+        <p>
+          Jeśli chcesz się dowiedzieć jak mogę pomóc Ci w osiągnięciu Twoich
+          celów, koniecznie zapoznaj się z
+          <Link to="/offer" className="main-content__link">
+            ofertą
+          </Link>
+          .
+        </p>
+        <p>
+          Na
+          <Link to="/blog" className="main-content__link">
+            blogu
+          </Link>
+          znajdziesz moje wpisy. Zapraszam do kontaktu.
+        </p>
+      </div>
     </Layout>
   )
 }
 
-export default BlogIndex
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
-        }
-      }
-    }
-  }
-`
+export default Main
