@@ -2,20 +2,17 @@ import React, { useEffect, useRef } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const Offer = ({ location }) => {
+const Offer = ({ location, path }) => {
   const storeDiv = useRef(null)
   const scriptRef = useRef(null)
 
-  // https://www.reddit.com/r/reactjs/comments/fwaam2/running_scripts_in_jsx_and_functions_defined_by/
-
-  let script = document.createElement("script")
-  script.charset = "utf-8"
-  script.type = "text/javascript"
-  script.src = "https://app.ecwid.com/script.js?44361007&data_platform=code"
-  script.defer = true
-  script.ref = scriptRef
-
   useEffect(() => {
+    let script = document.createElement("script")
+    script.charset = "utf-8"
+    script.type = "text/javascript"
+    script.src = "https://app.ecwid.com/script.js?44361007&data_platform=code"
+    script.defer = true
+    script.ref = scriptRef
     if (!scriptRef.current) {
       window._xnext_initialization_scripts = [
         {
@@ -26,7 +23,7 @@ const Offer = ({ location }) => {
       ]
       storeDiv.current.appendChild(script)
     }
-  })
+  }, [path])
 
   return (
     <Layout location={location}>
