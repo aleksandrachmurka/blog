@@ -14,6 +14,11 @@ const Offer = ({ location, path }) => {
     script.defer = true
     script.ref = scriptRef
     if (!scriptRef.current) {
+      window.ecwid_script_defer = true
+      window.ecwid_dynamic_widgets = true
+      window.ec = window.ec || Object()
+      window.ec.storefront = window.ec.storefront || Object()
+      window.ec.enable_catalog_on_one_page = true
       window._xnext_initialization_scripts = [
         {
           widgetType: "ProductBrowser",

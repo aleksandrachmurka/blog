@@ -21,11 +21,16 @@ const Main = ({ location }) => {
         </p>
         <p>
           Mamy wpływ na jakość naszego życia i to przekazuję ludziom. Zaś moje
-          motto życiowe to <b>„żyj zdrowo, aby żyć kolorowo”</b>.
+          motto życiowe to{" "}
+          <span style={{ fontWeight: "bold", color: "orange" }}>
+            „żyj zdrowo, aby żyć kolorowo”
+          </span>
+          .
         </p>
         <p>
           Więcej informacji o mnie znajdziesz
           <Link to="/about" className="main-content__link">
+            {" "}
             tutaj
           </Link>
           .
@@ -34,6 +39,7 @@ const Main = ({ location }) => {
           Jeśli chcesz się dowiedzieć jak mogę pomóc Ci w osiągnięciu Twoich
           celów, koniecznie zapoznaj się z
           <Link to="/offer" className="main-content__link">
+            {" "}
             ofertą
           </Link>
           .
@@ -41,7 +47,8 @@ const Main = ({ location }) => {
         <p>
           Na
           <Link to="/blog" className="main-content__link">
-            blogu
+            {" "}
+            blogu{" "}
           </Link>
           znajdziesz moje wpisy. Zapraszam do kontaktu.
         </p>
