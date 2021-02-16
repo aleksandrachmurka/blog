@@ -5,10 +5,41 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const About = ({ location }) => {
+  const data = useStaticQuery(graphql`
+    query AboutQuery {
+      whitePic: file(absolutePath: { regex: "/white.jpg/" }) {
+        childImageSharp {
+          fixed(width: 600, height: 400, quality: 95) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      gymPic: file(absolutePath: { regex: "/gym.jpg/" }) {
+        childImageSharp {
+          fixed(width: 600, height: 400, quality: 95) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      gymPic2: file(absolutePath: { regex: "/gym2.jpg/" }) {
+        childImageSharp {
+          fixed(width: 600, height: 400, quality: 95) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
+
+  const whitePic = data?.whitePic?.childImageSharp?.fixed
+  const gymPic = data?.gymPic?.childImageSharp?.fixed
+  const gymPic2 = data?.gymPic2?.childImageSharp?.fixed
+
   return (
     <Layout location={location}>
       <SEO title="Oferta" />
       <div>
+        <Image fixed={whitePic} className="bio-avatar" />
         <p>
           Jestem dietetykiem, medycznym trenerem personalnym, instruktorem
           tańca, choreografem, szkoleniowcem.
@@ -34,6 +65,7 @@ const About = ({ location }) => {
           wydzielające się endorfiny pozwolą spojrzeć na życie przychylnym
           okiem.
         </p>
+        <Image fixed={gymPic2} className="bio-avatar" />
         <p>
           Posiadam pełen kwalifikacje do prowadzenia zajęć ruchowych oraz
           poradni odżywiania.
@@ -62,6 +94,7 @@ const About = ({ location }) => {
           współpraca ze mną to nie tylko suche plany żywieniowe czy treningowe,
           to pełna współpraca również na polu psychologicznym.
         </p>
+        <Image fixed={gymPic} className="bio-avatar" />
       </div>
     </Layout>
   )
