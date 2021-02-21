@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
+import Qualifications from "../components/qualifications"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -9,21 +10,21 @@ const About = ({ location }) => {
     query AboutQuery {
       whitePic: file(absolutePath: { regex: "/white.jpg/" }) {
         childImageSharp {
-          fixed(width: 600, height: 400, quality: 95) {
+          fixed(width: 560, height: 380, quality: 95) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       gymPic: file(absolutePath: { regex: "/gym.jpg/" }) {
         childImageSharp {
-          fixed(width: 600, height: 400, quality: 95) {
+          fixed(width: 560, quality: 95) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       gymPic2: file(absolutePath: { regex: "/gym2.jpg/" }) {
         childImageSharp {
-          fixed(width: 600, height: 400, quality: 95) {
+          fixed(width: 560, quality: 95) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -37,65 +38,72 @@ const About = ({ location }) => {
 
   return (
     <Layout location={location}>
-      <SEO title="Oferta" />
-      <div>
-        <Image fixed={whitePic} className="bio-avatar" />
-        <p>
-          Jestem dietetykiem, medycznym trenerem personalnym, instruktorem
-          tańca, choreografem, szkoleniowcem.
-        </p>
-        <p>
-          W obecnej pracy ukierunkowanej na zdrowie, doskonale pomaga mi moje
-          wykształcenie co wyróżnia mnie wśród konkurencji. Wielu z moich
-          kolegów są albo dietetykami, albo trenerami personalnymi, gdzie w
-          pierwszym przypadku nie mają zgłębionej wiedzy na temat anatomii i
-          fizjologii ruchu człowieka , zaś w drugim przypadku wiedzę na temat
-          odżywiania mają dużo mniejszą i często w jednostkach chorobowych
-          takich jak: problemy z tarczycą, insuliooporność, cukrzyca , z
-          problemami z jelitami itp., nie radzą sobie dobrze z ustaleniem planu
-          żywienia dla swojego podopiecznego.
-        </p>
-        <p>
-          Całe życie pasjonował mnie ruch jako profilaktyka zapobiegająca wielu
-          schorzeniom cywilizacyjnym takim jak: otyłość, problemy z kręgosłupem,
-          wady postawy, wydolność organizmu oraz inne choroby układu krążenia i
-          nie tylko. Ruch ma również wpływ na nasz stan psychiczny. Okazuje się,
-          że odpowiednia dawka ruchu ma również niewiarygodnie pozytywny wpływ
-          na stany depresyjne i potrafi w dużej mierze je niwelować zaś
-          wydzielające się endorfiny pozwolą spojrzeć na życie przychylnym
-          okiem.
-        </p>
-        <Image fixed={gymPic2} className="bio-avatar" />
-        <p>
-          Posiadam pełen kwalifikacje do prowadzenia zajęć ruchowych oraz
-          poradni odżywiania.
-        </p>
-        <p>
-          {" "}
-          Swoje kwalifikacje stale podnoszę uczestnicząc w wielu konwencjach
-          szkoleniowych.
-        </p>
-        <p>
-          Posiadam akredytację REPs, co oznacza, że ukończone przeze mnie kursy
-          oraz zdobyte uprawnienia spełniają światowe wymogi a uzyskane dyplomy
-          są honorowane są na całym świecie.
-        </p>
-        <p>
-          W swojej wieloletniej pracy z ludźmi wykorzystuję poza zdobytą wiedzą
-          również własne doświadczenia oraz turbulencje życiowe, z którymi sobie
-          poradziłam do zwizualizowania moim klientom, że dzięki uporowi,
-          właściwej ścieżce działania, pozytywnemu nastawieniu, determinacji
-          możemy poprawić swój stan fizyczny, psychiczny, emocjonalny, zdrowotny
-          a czasem zmienić całkowicie swoje życie na pełne uśmiechu, miłości i
-          szczęścia.
-        </p>
-        <p>
-          Jestem kobietą z krwi i kości, dojrzałą z doświadczeniem stąd
-          współpraca ze mną to nie tylko suche plany żywieniowe czy treningowe,
-          to pełna współpraca również na polu psychologicznym.
-        </p>
-        <Image fixed={gymPic} className="bio-avatar" />
+      <SEO title="O mnie" />
+      <div className="about_row">
+        <Image fixed={whitePic} className="about-image" />
+        <div className="about-text">
+          <p style={{ fontFamily: "Caveat", fontSize: "1.5rem" }}>
+            Jestem dietetykiem, medycznym trenerem personalnym, instruktorem
+            tańca, choreografem, szkoleniowcem.
+          </p>
+          <p style={{ fontFamily: "Gabriela" }}>
+            W obecnej pracy ukierunkowanej na zdrowie, doskonale pomaga mi moje
+            wykształcenie co wyróżnia mnie wśród konkurencji. Wielu z moich
+            kolegów są albo dietetykami, albo trenerami personalnymi, gdzie w
+            pierwszym przypadku nie mają zgłębionej wiedzy na temat anatomii i
+            fizjologii ruchu człowieka, zaś w drugim przypadku wiedzę na temat
+            odżywiania mają dużo mniejszą i często w jednostkach chorobowych
+            takich jak: problemy z tarczycą, insuliooporność, cukrzyca, z
+            problemami z jelitami itp., nie radzą sobie dobrze z ustaleniem
+            planu żywienia dla swojego podopiecznego.
+          </p>
+        </div>
       </div>
+      <div className="about_row">
+        <div className="about-text">
+          <p style={{ fontFamily: "Noto Serif" }}>
+            Całe życie pasjonował mnie ruch jako profilaktyka zapobiegająca
+            wielu schorzeniom cywilizacyjnym takim jak: otyłość, problemy z
+            kręgosłupem, wady postawy, wydolność organizmu oraz inne choroby
+            układu krążenia i nie tylko. Ruch ma również wpływ na nasz stan
+            psychiczny. Okazuje się, że odpowiednia dawka ruchu ma również
+            niewiarygodnie pozytywny wpływ na stany depresyjne i potrafi w dużej
+            mierze je niwelować zaś wydzielające się endorfiny pozwolą spojrzeć
+            na życie przychylnym okiem.
+          </p>
+          <p style={{ fontFamily: "EB Garamond", fontSize: "1.2rem" }}>
+            Posiadam pełne kwalifikacje do prowadzenia zajęć ruchowych oraz
+            poradni odżywiania. Swoje kwalifikacje stale podnoszę uczestnicząc w
+            wielu konwencjach szkoleniowych.
+          </p>
+          <p style={{ fontFamily: "Cormorant Infant", fontSize: "1.2rem" }}>
+            Posiadam akredytację REPs, co oznacza, że ukończone przeze mnie
+            kursy oraz zdobyte uprawnienia spełniają światowe wymogi a uzyskane
+            dyplomy są honorowane są na całym świecie.
+          </p>
+        </div>
+        <Image fixed={gymPic2} className="about-image" />
+      </div>
+      <div className="about_row">
+        <Image fixed={gymPic} className="about-image" />
+        <div className="about-text">
+          <p style={{ fontFamily: "Kalam" }}>
+            W swojej wieloletniej pracy z ludźmi wykorzystuję poza zdobytą
+            wiedzą również własne doświadczenia oraz turbulencje życiowe, z
+            którymi sobie poradziłam do zwizualizowania moim klientom, że dzięki
+            uporowi, właściwej ścieżce działania, pozytywnemu nastawieniu,
+            determinacji możemy poprawić swój stan fizyczny, psychiczny,
+            emocjonalny, zdrowotny a czasem zmienić całkowicie swoje życie na
+            pełne uśmiechu, miłości i szczęścia.
+          </p>
+          <p style={{ fontFamily: "Radley" }}>
+            Jestem kobietą z krwi i kości, dojrzałą z doświadczeniem stąd
+            współpraca ze mną to nie tylko suche plany żywieniowe czy
+            treningowe, to pełna współpraca również na polu psychologicznym.
+          </p>
+        </div>
+      </div>
+      <Qualifications />
     </Layout>
   )
 }

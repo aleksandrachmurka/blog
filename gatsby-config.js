@@ -65,12 +65,29 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/logo.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Caveat`,
+          `Noto Serif`,
+          `EB Garamond`,
+          `Cormorant Infant`,
+          `Gabriela`,
+          `Courgette`,
+          `Kalam`,
+          `Berkshire Swash`,
+          `Radley`,
+        ],
+        display: "swap",
+      },
+    },
   ],
 }

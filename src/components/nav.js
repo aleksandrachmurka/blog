@@ -5,9 +5,9 @@ import Image from "gatsby-image"
 const Nav = () => {
   const data = useStaticQuery(graphql`
     query NavQuery {
-      logo: file(absolutePath: { regex: "/logo.png/" }) {
+      logo: file(absolutePath: { regex: "/logo2.png/" }) {
         childImageSharp {
-          fixed(width: 200, height: 140, quality: 95) {
+          fixed(width: 260, height: 160, quality: 95) {
             ...GatsbyImageSharpFixed
           }
         }
