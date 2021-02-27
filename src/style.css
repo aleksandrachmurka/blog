@@ -388,6 +388,10 @@ a:focus {
   display: none;
 }
 
+.option-surcharge {
+  display: none;
+}
+
 /* Footer */
 
 .footer__wrapper {
