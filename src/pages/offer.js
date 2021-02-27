@@ -16,7 +16,7 @@ const loadEcwid = (div, guid) => {
   window._xnext_initialization_scripts = [
     {
       widgetType: "ProductBrowser",
-      id: guid,
+      id: "my-store",
       arg: ["id=productBrowser"],
     },
   ]
@@ -36,17 +36,17 @@ const loadEcwid = (div, guid) => {
   }
 }
 
-let getState = () => "_" + Math.random().toString(36).substr(2, 9)
+// let getState = () => "_" + Math.random().toString(36).substr(2, 9)
 
 const Offer = ({ location, path }) => {
-  const [guid, setGuid] = useState(getState())
+  // const [guid, setGuid] = useState(getState())
   const storeDiv = useRef(null)
 
   if (location.state && location.state.prevPath !== "/offer") {
     window.location.reload()
   }
   useEffect(() => {
-    loadEcwid(storeDiv, guid)
+    loadEcwid(storeDiv)
   }, [location])
 
   return (
@@ -60,7 +60,7 @@ const Offer = ({ location, path }) => {
         </p>
         <p>Sklep umożliwia bezpośredni zakup wybranych usług.</p>
       </div>
-      <div id={guid} ref={storeDiv}></div>
+      <div id="my-store" ref={storeDiv}></div>
       <div className="shop-section">
         <WeddingDance />
       </div>
