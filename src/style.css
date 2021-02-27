@@ -161,6 +161,7 @@ a {
 
 a:hover {
   color: orange;
+  cursor: pointer;
 }
 
 /* Prose */

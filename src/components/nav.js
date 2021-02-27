@@ -1,8 +1,8 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql, navigate } from "gatsby"
 import Image from "gatsby-image"
 
-const Nav = () => {
+const Nav = ({ location }) => {
   const data = useStaticQuery(graphql`
     query NavQuery {
       logo: file(absolutePath: { regex: "/logo2.png/" }) {
@@ -16,6 +16,12 @@ const Nav = () => {
   `)
   const logo = data?.logo?.childImageSharp?.fixed
 
+  console.log(location)
+
+  const offerHandler = () => {
+    navigate("/offer", { state: { prevPath: location.pathname } })
+  }
+
   return (
     <nav className="nav">
       <ul className="nav__items">
@@ -23,7 +29,7 @@ const Nav = () => {
           <Image fixed={logo} alt="logo" className="logo" />
         </Link>
         <li>
-          <Link to="/offer">Oferta</Link>
+          <a onClick={offerHandler}>Oferta</a>
         </li>
         <li>
           <Link to="/about">O mnie</Link>

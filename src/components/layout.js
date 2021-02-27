@@ -8,7 +8,7 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <>
-      <Nav />
+      <Nav location={location} />
       <div className="main-wrapper" data-is-root-path={isRootPath}>
         <main>{children}</main>
       </div>

@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Partners from "../components/partners"
 import SEO from "../components/seo"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql, navigate } from "gatsby"
 import Image from "gatsby-image"
 
 const Main = ({ location }) => {
@@ -20,6 +20,10 @@ const Main = ({ location }) => {
   `)
 
   const image = data?.image?.childImageSharp?.fixed
+
+  const offerHandler = () => {
+    navigate("/offer", { state: { prevPath: location.pathname } })
+  }
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -59,10 +63,10 @@ const Main = ({ location }) => {
           <p>
             Jeśli chcesz się dowiedzieć jak mogę pomóc Ci w osiągnięciu Twoich
             celów, koniecznie zapoznaj się z
-            <Link to="/offer" className="main-content__link">
+            <a className="main-content__link" onClick={offerHandler}>
               {" "}
               ofertą
-            </Link>
+            </a>
             .
           </p>
           <p>
