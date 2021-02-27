@@ -46,7 +46,7 @@ const About = ({ location }) => {
             Jestem dietetykiem, medycznym trenerem personalnym, instruktorem
             tańca, choreografem, szkoleniowcem.
           </p>
-          <p style={{ fontFamily: "Gabriela" }}>
+          <p>
             W obecnej pracy ukierunkowanej na zdrowie, doskonale pomaga mi moje
             wykształcenie co wyróżnia mnie wśród konkurencji. Wielu z moich
             kolegów są albo dietetykami, albo trenerami personalnymi, gdzie w
@@ -61,7 +61,7 @@ const About = ({ location }) => {
       </div>
       <div className="about_row">
         <div className="about-text">
-          <p style={{ fontFamily: "Noto Serif" }}>
+          <p>
             Całe życie pasjonował mnie ruch jako profilaktyka zapobiegająca
             wielu schorzeniom cywilizacyjnym takim jak: otyłość, problemy z
             kręgosłupem, wady postawy, wydolność organizmu oraz inne choroby
@@ -71,12 +71,12 @@ const About = ({ location }) => {
             mierze je niwelować zaś wydzielające się endorfiny pozwolą spojrzeć
             na życie przychylnym okiem.
           </p>
-          <p style={{ fontFamily: "EB Garamond", fontSize: "1.2rem" }}>
+          <p>
             Posiadam pełne kwalifikacje do prowadzenia zajęć ruchowych oraz
             poradni odżywiania. Swoje kwalifikacje stale podnoszę uczestnicząc w
             wielu konwencjach szkoleniowych.
           </p>
-          <p style={{ fontFamily: "Cormorant Infant", fontSize: "1.2rem" }}>
+          <p>
             Posiadam akredytację REPs, co oznacza, że ukończone przeze mnie
             kursy oraz zdobyte uprawnienia spełniają światowe wymogi a uzyskane
             dyplomy są honorowane są na całym świecie.
@@ -87,7 +87,7 @@ const About = ({ location }) => {
       <div className="about_row">
         <Image fixed={gymPic} className="about-image" />
         <div className="about-text">
-          <p style={{ fontFamily: "Kalam" }}>
+          <p>
             W swojej wieloletniej pracy z ludźmi wykorzystuję poza zdobytą
             wiedzą również własne doświadczenia oraz turbulencje życiowe, z
             którymi sobie poradziłam do zwizualizowania moim klientom, że dzięki
@@ -96,7 +96,7 @@ const About = ({ location }) => {
             emocjonalny, zdrowotny a czasem zmienić całkowicie swoje życie na
             pełne uśmiechu, miłości i szczęścia.
           </p>
-          <p style={{ fontFamily: "Radley" }}>
+          <p>
             Jestem kobietą z krwi i kości, dojrzałą z doświadczeniem stąd
             współpraca ze mną to nie tylko suche plany żywieniowe czy
             treningowe, to pełna współpraca również na polu psychologicznym.

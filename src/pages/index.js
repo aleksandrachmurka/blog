@@ -9,7 +9,7 @@ const Main = ({ location }) => {
   const siteTitle = `Title`
   const data = useStaticQuery(graphql`
     query MainImageQuery {
-      image: file(absolutePath: { regex: "/pineapple.jpg/" }) {
+      image: file(absolutePath: { regex: "/purple_vertical.jpg/" }) {
         childImageSharp {
           fixed(width: 310, height: 560, quality: 85) {
             ...GatsbyImageSharpFixed

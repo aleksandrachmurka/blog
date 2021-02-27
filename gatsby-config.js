@@ -75,17 +75,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Caveat`,
-          `Noto Serif`,
-          `EB Garamond`,
-          `Cormorant Infant`,
-          `Gabriela`,
-          `Courgette`,
-          `Kalam`,
-          `Berkshire Swash`,
-          `Radley`,
-        ],
+        fonts: [`Caveat`, `Gabriela`, `Courgette`],
         display: "swap",
       },
     },
