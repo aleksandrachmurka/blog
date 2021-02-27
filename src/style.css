@@ -393,6 +393,18 @@ a:focus {
   display: none;
 }
 
+.ec-cart {
+  font-family: var(--fontFamily-sans);
+}
+
+.form-control__text {
+  font-family: var(--fontFamily-sans);
+}
+
+.ec-cart__body h1 {
+  display: none;
+}
+
 /* Footer */
 
 .footer__wrapper {
