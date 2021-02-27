@@ -5,7 +5,7 @@ import WeddingDance from "../components/wedding_dance"
 import DanceShows from "../components/dance_shows"
 import Trainings from "../components/trainings"
 
-const loadEcwid = (div, guid) => {
+const loadEcwid = div => {
   window.ecwid_script_defer = true
   window.ecwid_dynamic_widgets = true
 
@@ -26,20 +26,13 @@ const loadEcwid = (div, guid) => {
     script.type = "text/javascript"
     script.src = "https://app.ecwid.com/script.js?49080464&data_platform=code"
     script.id = "ecwid-script"
-    // script.onload = function () {
-    //   window.Ecwid.init()
-    // }
-
     div.current.appendChild(script)
   } else {
     window.ecwid_onBodyDone()
   }
 }
 
-// let getState = () => "_" + Math.random().toString(36).substr(2, 9)
-
 const Offer = ({ location, path }) => {
-  // const [guid, setGuid] = useState(getState())
   const storeDiv = useRef(null)
 
   if (location.state && location.state.prevPath !== "/offer") {
@@ -47,7 +40,7 @@ const Offer = ({ location, path }) => {
   }
   useEffect(() => {
     loadEcwid(storeDiv)
-  }, [location])
+  }, [])
 
   return (
     <Layout location={location}>
