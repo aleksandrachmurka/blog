@@ -53,7 +53,7 @@ const About = ({ location }) => {
             pierwszym przypadku nie mają zgłębionej wiedzy na temat anatomii i
             fizjologii ruchu człowieka, zaś w drugim przypadku wiedzę na temat
             odżywiania mają dużo mniejszą i często w jednostkach chorobowych
-            takich jak: problemy z tarczycą, insuliooporność, cukrzyca, z
+            takich jak: problemy z tarczycą, insulioopornością, cukrzycą, z
             problemami z jelitami itp., nie radzą sobie dobrze z ustaleniem
             planu żywienia dla swojego podopiecznego.
           </p>

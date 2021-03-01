@@ -405,6 +405,15 @@ a:focus {
   display: none;
 }
 
+.grid__description-inner {
+  font-family: var(--fontFamily-about);
+}
+
+a[href*="profilaktykazdrowia.pl"] {
+  font-family: inherit;
+  font-size: inherit;
+}
+
 /* Footer */
 
 .footer__wrapper {

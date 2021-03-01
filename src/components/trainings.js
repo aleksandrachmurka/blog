@@ -34,6 +34,16 @@ const Trainings = ({ location }) => {
         odpowiednich warunków o których rozmawiamy w trakcie wstępnej rozmowy
       </p>
       <p>
+        Zapraszam na stronę{" "}
+        <a
+          href="http://szkoleniaprofilaktykazdrowia.pl"
+          target="_blank"
+          rel="norefferer"
+        >
+          szkoleniaprofilaktykazdrowia.pl
+        </a>
+      </p>
+      <p>
         <b>Masz więcej pytań – napisz lub zadzwoń</b>
       </p>
     </>
