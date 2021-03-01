@@ -14,7 +14,7 @@ const Footer = () => (
         <h4>Kontakt</h4>
         <p>
           <HiMail style={{ height: "1.5em", width: "1.5em" }} />
-          <span>dietetykdorotajanur@wp.pl</span>
+          <span>info@dietetyktrenujedorotajanur.pl</span>
         </p>
         <p>
           <AiFillPhone style={{ height: "1.5em", width: "1.5em" }} />

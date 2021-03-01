@@ -407,6 +407,7 @@ a:focus {
 
 .grid__description-inner {
   font-family: var(--fontFamily-about);
+  color: var(--color-text-main);
 }
 
 a[href*="profilaktykazdrowia.pl"] {

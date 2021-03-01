@@ -37,8 +37,8 @@ const WeddingDance = ({ location }) => {
       <ul>
         <li>
           Przygotowanie choreografii do wybranej przez młodych piosenki
-          dopasowując ją do umiejętności i poziomu zaawansowania pary (
-          choreografie w stylu klasycznym jak np. walc lub też nowoczesne opcje
+          dopasowując ją do umiejętności i poziomu zaawansowania pary
+          (choreografie w stylu klasycznym jak np. walc lub też nowoczesne opcje
           a nawet miksy stylów).
         </li>
         <li>Nauka tej choreografii na 5 spotkaniach.</li>
