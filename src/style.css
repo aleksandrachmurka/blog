@@ -373,6 +373,7 @@ a:focus {
   font-family: var(--fontFamily-about);
   font-size: 1rem;
   margin-bottom: 2%;
+  text-align: justify;
 }
 
 .grid__description-inner {
@@ -566,5 +567,14 @@ a[href*="profilaktykazdrowia.pl"] {
   }
   .about-text {
     width: auto;
+  }
+  .about-text:nth-of-type(2) {
+    margin-left: 0;
+  }
+  .about-image {
+    width: 100%;
+  }
+  .offer-image {
+    width: 100%;
   }
 }
