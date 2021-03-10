@@ -63,7 +63,7 @@ module.exports = {
         short_name: `Dietetyk trenuje`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#178998`,
         display: `minimal-ui`,
         icon: `content/assets/logo.png`,
       },
