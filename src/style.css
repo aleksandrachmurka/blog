@@ -297,6 +297,7 @@ a:focus {
 
 .partner-logos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-top: 4%;
@@ -429,7 +430,7 @@ a[href*="profilaktykazdrowia.pl"] {
 .footer-container {
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: 100%;
   justify-content: space-around;
 }
 
@@ -526,5 +527,38 @@ a[href*="profilaktykazdrowia.pl"] {
   ul,
   ol {
     list-style-position: inside;
+  }
+  .main-container {
+    flex-direction: column;
+  }
+  .main-image {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .main-content {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    height: 360px;
+  }
+  .nav__items {
+    flex-direction: column;
+  }
+  .main-wrapper {
+    margin-top: 360px;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+@media (max-width: 790px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  .footer-links {
+    width: 40%;
   }
 }
