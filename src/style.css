@@ -552,12 +552,6 @@ a[href*="profilaktykazdrowia.pl"] {
     margin-left: 2%;
     margin-right: 2%;
   }
-  .about_row {
-    flex-direction: column;
-  }
-  .about-text {
-    width: auto;
-  }
 }
 
 @media (max-width: 790px) {
@@ -566,5 +560,11 @@ a[href*="profilaktykazdrowia.pl"] {
   }
   .footer-links {
     width: 40%;
+  }
+  .about_row {
+    flex-direction: column;
+  }
+  .about-text {
+    width: auto;
   }
 }
