@@ -10,37 +10,37 @@ const About = ({ location }) => {
     query AboutQuery {
       whitePic: file(absolutePath: { regex: "/white.jpg/" }) {
         childImageSharp {
-          fixed(width: 560, height: 380, quality: 95) {
-            ...GatsbyImageSharpFixed
+          fluid(quality: 95) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       gymPic: file(absolutePath: { regex: "/gym.jpg/" }) {
         childImageSharp {
-          fixed(width: 560, quality: 95) {
-            ...GatsbyImageSharpFixed
+          fluid(quality: 95) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       gymPic2: file(absolutePath: { regex: "/gym2.jpg/" }) {
         childImageSharp {
-          fixed(width: 560, quality: 95) {
-            ...GatsbyImageSharpFixed
+          fluid(quality: 95) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
 
-  const whitePic = data?.whitePic?.childImageSharp?.fixed
-  const gymPic = data?.gymPic?.childImageSharp?.fixed
-  const gymPic2 = data?.gymPic2?.childImageSharp?.fixed
+  const whitePic = data?.whitePic?.childImageSharp?.fluid
+  const gymPic = data?.gymPic?.childImageSharp?.fluid
+  const gymPic2 = data?.gymPic2?.childImageSharp?.fluid
 
   return (
     <Layout location={location}>
       <SEO title="O mnie" />
       <div className="about_row">
-        <Image fixed={whitePic} className="about-image" />
+        <Image fluid={whitePic} className="about-image" />
         <div className="about-text">
           <p style={{ fontFamily: "Caveat", fontSize: "1.5rem" }}>
             Jestem dietetykiem, medycznym trenerem personalnym, instruktorem
@@ -82,10 +82,10 @@ const About = ({ location }) => {
             dyplomy są honorowane są na całym świecie.
           </p>
         </div>
-        <Image fixed={gymPic2} className="about-image" />
+        <Image fluid={gymPic2} className="about-image" />
       </div>
       <div className="about_row">
-        <Image fixed={gymPic} className="about-image" />
+        <Image fluid={gymPic} className="about-image" />
         <div className="about-text">
           <p>
             W swojej wieloletniej pracy z ludźmi wykorzystuję poza zdobytą

@@ -11,15 +11,15 @@ const Main = ({ location }) => {
     query MainImageQuery {
       image: file(absolutePath: { regex: "/purple_vertical.jpg/" }) {
         childImageSharp {
-          fixed(width: 310, height: 560, quality: 85) {
-            ...GatsbyImageSharpFixed
+          fluid(quality: 85) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
 
-  const image = data?.image?.childImageSharp?.fixed
+  const image = data?.image?.childImageSharp?.fluid
 
   const offerHandler = () => {
     navigate("/offer", { state: { prevPath: location.pathname } })
@@ -30,7 +30,7 @@ const Main = ({ location }) => {
       <SEO title="Strona główna" />
       <div className="main-container">
         <div className="main-image">
-          <Image fixed={image} alt="placeholder" />
+          <Image fluid={image} alt="placeholder" />
         </div>
         <div className="main-content">
           <p>Witam Cię na mojej stronie internetowej!</p>

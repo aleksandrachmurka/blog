@@ -9,23 +9,23 @@ const WeddingDance = ({ location }) => {
     query WeddingQuery {
       weddingPic: file(absolutePath: { regex: "/wedding.jpg/" }) {
         childImageSharp {
-          fixed(width: 560, height: 380, quality: 95) {
-            ...GatsbyImageSharpFixed
+          fluid(quality: 95) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       weddingPic2: file(absolutePath: { regex: "/wedding2.jpg/" }) {
         childImageSharp {
-          fixed(width: 560, quality: 95) {
-            ...GatsbyImageSharpFixed
+          fluid(quality: 95) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
 
-  const weddingPic = data?.weddingPic?.childImageSharp?.fixed
-  const weddingPic2 = data?.weddingPic2?.childImageSharp?.fixed
+  const weddingPic = data?.weddingPic?.childImageSharp?.fluid
+  const weddingPic2 = data?.weddingPic2?.childImageSharp?.fluid
 
   return (
     <>
@@ -47,7 +47,7 @@ const WeddingDance = ({ location }) => {
           para czuła się komfortowo zaś odbiorca został oczarowany.
         </li>
       </ul>
-      <Image fixed={weddingPic} className="offer-image" />
+      <Image fluid={weddingPic} className="offer-image" />
       <p style={{ marginTop: "2%" }}>
         Ostatnie spotkanie odbywa się na sali, gdzie odbędzie się wesele, w celu
         oswojenia się przez parę z miejscem, z zastrzeżeniem że sala nie
@@ -66,7 +66,7 @@ const WeddingDance = ({ location }) => {
       <p>
         <b>Cena: 750 zł</b>
       </p>
-      <Image fixed={weddingPic2} className="offer-image" />
+      <Image fluid={weddingPic2} className="offer-image" />
     </>
   )
 }
