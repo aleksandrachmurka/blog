@@ -4,10 +4,10 @@ module.exports = {
     author: {
       name: `Dorota Janur`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `Dorota Janur oferta dietetyka treningi Legnica Lubin`,
+    siteUrl: `https://dietetyktrenujedorotajanur.pl/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: ``,
     },
   },
   plugins: [
