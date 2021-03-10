@@ -533,11 +533,12 @@ a[href*="profilaktykazdrowia.pl"] {
     flex-direction: column;
   }
   .main-image {
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
   }
   .main-content {
     margin: 0 auto;
+    width: 80%;
   }
 }
 
