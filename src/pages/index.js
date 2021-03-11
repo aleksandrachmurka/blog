@@ -33,7 +33,7 @@ const Main = ({ location }) => {
           <Image fluid={image} alt="placeholder" />
         </div>
         <div className="main-content">
-          <p>Witam Cię na mojej stronie internetowej!</p>
+          <p>Witam Cię na mojej stronie!</p>
           <p>
             Moją misją jest wzbudzenie świadomości w ludziach na temat ich
             zdrowia i dobrego samopoczucia.
