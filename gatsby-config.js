@@ -4,11 +4,8 @@ module.exports = {
     author: {
       name: `Dorota Janur`,
     },
-    description: `Dorota Janur oferta dietetyka treningi Legnica Lubin`,
+    description: `Dorota Janur - dietetyka i treningi Legnica Lubin`,
     siteUrl: `https://dietetyktrenujedorotajanur.pl/`,
-    social: {
-      twitter: ``,
-    },
   },
   plugins: [
     {

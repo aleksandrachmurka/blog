@@ -18,9 +18,6 @@ const SEO = ({ description, lang, meta, title }) => {
           siteMetadata {
             title
             description
-            social {
-              twitter
-            }
           }
         }
       }
@@ -54,22 +51,6 @@ const SEO = ({ description, lang, meta, title }) => {
           property: `og:type`,
           content: `website`,
         },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.social?.twitter || ``,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
       ].concat(meta)}
     />
   )
@@ -78,7 +59,7 @@ const SEO = ({ description, lang, meta, title }) => {
 SEO.defaultProps = {
   lang: `pl`,
   meta: [],
-  description: ``,
+  description: `Dorota Janur - dietetyka i treningi Legnica Lubin`,
 }
 
 SEO.propTypes = {
