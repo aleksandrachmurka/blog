@@ -30,9 +30,7 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        <footer>
-          <Bio />
-        </footer>
+        <Bio />
       </article>
       <nav className="blog-post-nav">
         <ul
@@ -83,7 +81,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "DD MMMM, YYYY", locale: "pl")
+        date(formatString: "D MMMM, YYYY", locale: "pl")
         description
       }
     }

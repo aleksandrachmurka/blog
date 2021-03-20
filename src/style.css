@@ -518,6 +518,15 @@ a[href*="profilaktykazdrowia.pl"] {
   margin-bottom: var(--spacing-8);
 }
 
+.bio {
+  display: flex;
+  flex-direction: row;
+}
+
+.bio-avatar {
+  margin-right: 2%;
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {
