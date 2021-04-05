@@ -33,6 +33,7 @@ const Qualifications = () => {
               <Image
                 fixed={edge.node.childImageSharp.fixed}
                 key={edge.node.name}
+                alt="Diploma, certification"
               />
             </div>
           ))}

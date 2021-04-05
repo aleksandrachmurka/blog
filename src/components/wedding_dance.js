@@ -45,7 +45,11 @@ const WeddingDance = () => {
           para czuła się komfortowo zaś odbiorca został oczarowany.
         </li>
       </ul>
-      <Image fluid={weddingPic} className="offer-image" />
+      <Image
+        fluid={weddingPic}
+        className="offer-image"
+        alt="Newly married couple dancing on a wedding"
+      />
       <p style={{ marginTop: "2%" }}>
         Ostatnie spotkanie odbywa się na sali, gdzie odbędzie się wesele, w celu
         oswojenia się przez parę z miejscem, z zastrzeżeniem że sala nie
@@ -64,7 +68,11 @@ const WeddingDance = () => {
       <p>
         <b>Cena: 750 zł</b>
       </p>
-      <Image fluid={weddingPic2} className="offer-image" />
+      <Image
+        fluid={weddingPic2}
+        className="offer-image"
+        alt="Newly married couple dancing on a wedding"
+      />
     </>
   )
 }

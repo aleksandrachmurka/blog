@@ -30,7 +30,10 @@ const Main = ({ location }) => {
       <SEO title="Strona główna" />
       <div className="main-container">
         <div className="main-image">
-          <Image fluid={image} alt="placeholder" />
+          <Image
+            fluid={image}
+            alt="Woman in purple dress sitting next to the desk facing forward"
+          />
         </div>
         <div className="main-content">
           <p>Witam Cię na mojej stronie!</p>
