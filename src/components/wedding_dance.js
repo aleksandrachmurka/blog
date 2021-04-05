@@ -1,10 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 
-const WeddingDance = ({ location }) => {
+const WeddingDance = () => {
   const data = useStaticQuery(graphql`
     query WeddingQuery {
       weddingPic: file(absolutePath: { regex: "/wedding.jpg/" }) {

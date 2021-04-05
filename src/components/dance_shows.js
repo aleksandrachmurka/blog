@@ -1,6 +1,6 @@
 import React from "react"
 
-const DanceShows = ({ location }) => {
+const DanceShows = () => {
   return (
     <>
       <h2>Pokazy taneczne</h2>
