@@ -417,6 +417,10 @@ a[href*="profilaktykazdrowia.pl"] {
   font-size: inherit;
 }
 
+.offer-image {
+  width: 100%;
+}
+
 /* Footer */
 
 .footer__wrapper {
@@ -458,6 +462,8 @@ a[href*="profilaktykazdrowia.pl"] {
 .footer-links a:hover {
   transform: scale(1.5);
 }
+
+/*Blog*/
 
 .global-header {
   margin-bottom: var(--spacing-12);
@@ -582,9 +588,6 @@ a[href*="profilaktykazdrowia.pl"] {
     margin-left: 0;
   }
   .about-image {
-    width: 100%;
-  }
-  .offer-image {
     width: 100%;
   }
 }
