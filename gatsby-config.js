@@ -26,6 +26,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-plugin-netlify-cms-paths`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -41,13 +42,13 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          {
-            resolve: `gatsby-plugin-netlify-cms-paths`,
-            options: {
-              // Path to your Netlify CMS config file
-              cmsConfig: `/static/admin/config.yml`,
-            },
-          },
+          // {
+          //   resolve: `gatsby-plugin-netlify-cms-paths`,
+          //   options: {
+          //     // Path to your Netlify CMS config file
+          //     cmsConfig: `/static/admin/config.yml`,
+          //   },
+          // },
         ],
       },
     },
