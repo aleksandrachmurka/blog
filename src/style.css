@@ -407,6 +407,11 @@ a:focus {
   display: none;
 }
 
+.ec-notice__title,
+.ec-notice__text {
+  font-family: var(--fontFamily-sans);
+}
+
 .grid__description-inner {
   font-family: var(--fontFamily-about);
   color: var(--color-text-main);
