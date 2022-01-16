@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import Partners from "../components/partners"
+import Grant from "../components/grant"
 import SEO from "../components/seo"
 import { Link, useStaticQuery, graphql, navigate } from "gatsby"
 import Image from "gatsby-image"
@@ -83,6 +84,7 @@ const Main = ({ location }) => {
         </div>
       </div>
       <Partners />
+      <Grant />
     </Layout>
   )
 }

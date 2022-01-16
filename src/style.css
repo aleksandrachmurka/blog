@@ -308,6 +308,16 @@ a:focus {
   transform: scale(1.2);
 }
 
+/* Grant */
+
+.grant-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4%;
+  width: 100%;
+}
+
 /* About */
 
 .about_row {
