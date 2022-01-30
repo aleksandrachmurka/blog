@@ -4,10 +4,17 @@ module.exports = {
     author: {
       name: `Dorota Janur`,
     },
-    description: `Dorota Janur - dietetyka i treningi Legnica Lubin`,
+    description: `Dorota Janur - dietetyka i treningi Legnica Lubin. Oferta. O mnie. Blog`,
     siteUrl: `https://dietetyktrenujedorotajanur.pl/`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/images/uploads`,
+        name: `uploads`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -26,6 +33,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-plugin-netlify-cms-paths`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -62,7 +70,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#178998`,
         display: `minimal-ui`,
-        icon: `content/assets/logo.png`,
+        icon: `content/assets/logo2.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -76,5 +84,6 @@ module.exports = {
         display: "swap",
       },
     },
+    `gatsby-plugin-netlify-cms`,
   ],
 }

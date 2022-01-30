@@ -1,10 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 
-const WeddingDance = ({ location }) => {
+const WeddingDance = () => {
   const data = useStaticQuery(graphql`
     query WeddingQuery {
       weddingPic: file(absolutePath: { regex: "/wedding.jpg/" }) {
@@ -47,7 +45,11 @@ const WeddingDance = ({ location }) => {
           para czuła się komfortowo zaś odbiorca został oczarowany.
         </li>
       </ul>
-      <Image fluid={weddingPic} className="offer-image" />
+      <Image
+        fluid={weddingPic}
+        className="offer-image"
+        alt="Newly married couple dancing on a wedding"
+      />
       <p style={{ marginTop: "2%" }}>
         Ostatnie spotkanie odbywa się na sali, gdzie odbędzie się wesele, w celu
         oswojenia się przez parę z miejscem, z zastrzeżeniem że sala nie
@@ -66,7 +68,11 @@ const WeddingDance = ({ location }) => {
       <p>
         <b>Cena: 750 zł</b>
       </p>
-      <Image fluid={weddingPic2} className="offer-image" />
+      <Image
+        fluid={weddingPic2}
+        className="offer-image"
+        alt="Newly married couple dancing on a wedding"
+      />
     </>
   )
 }

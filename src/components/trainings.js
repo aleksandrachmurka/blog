@@ -1,6 +1,6 @@
 import React from "react"
 
-const Trainings = ({ location }) => {
+const Trainings = () => {
   return (
     <>
       <h2>Szkolenia</h2>
