@@ -40,7 +40,11 @@ const About = ({ location }) => {
     <Layout location={location}>
       <SEO title="O mnie" />
       <div className="about_row">
-        <Image fluid={whitePic} className="about-image" />
+        <Image
+          fluid={whitePic}
+          className="about-image"
+          alt="Woman in white medical uniform sitting behing the desk"
+        />
         <div className="about-text">
           <p style={{ fontFamily: "Caveat", fontSize: "1.5rem" }}>
             Jestem dietetykiem, medycznym trenerem personalnym, instruktorem
@@ -82,10 +86,18 @@ const About = ({ location }) => {
             dyplomy są honorowane są na całym świecie.
           </p>
         </div>
-        <Image fluid={gymPic2} className="about-image" />
+        <Image
+          fluid={gymPic2}
+          className="about-image"
+          alt="Woman in black and neon green training suit at the gym leaning against weights"
+        />
       </div>
       <div className="about_row">
-        <Image fluid={gymPic} className="about-image" />
+        <Image
+          fluid={gymPic}
+          className="about-image"
+          alt="Woman in white top and purple leggings exercising on treadmill"
+        />
         <div className="about-text">
           <p>
             W swojej wieloletniej pracy z ludźmi wykorzystuję poza zdobytą

@@ -1,12 +1,12 @@
 import React from "react"
 
-const DanceShows = ({ location }) => {
+const DanceShows = () => {
   return (
     <>
       <h2>Pokazy taneczne</h2>
       <p>
         Specjalizujemy się w nietuzinkowych pokazach tanecznych w przeróżnych
-        stylach min: :
+        stylach min:
       </p>
       <ul>
         <li>oriental show</li>
@@ -19,14 +19,14 @@ const DanceShows = ({ location }) => {
       <p>
         Jesteśmy w stanie przygotować specjalne show na życzenie klienta o
         wybranej tematyce. Oferujemy również podczas pokazów mini naukę tańca
-        dla gości , konkursy lub wspólną zabawę. Jesteśmy kreatywni więc jeśli
+        dla gości, konkursy lub wspólną zabawę. Jesteśmy kreatywni więc jeśli
         nie masz pomysłu skontaktuj się z nami a my pomożemy Ci przygotować
         efektowną zabawę dla Twoich gości lub współpracowników.
       </p>
       <p>
         Tańczymy na eventach, imprezach firmowych, weselach, Sylwestrze,
-        Andrzejkach , imprezach rodzinnych , imieninach i urodzinach. Nie
-        tańczymy na imprezach kawalerskich.
+        Andrzejkach, imprezach rodzinnych, imieninach i urodzinach. Nie tańczymy
+        na imprezach kawalerskich.
       </p>
       <p>
         Nasza grupa składa się z wykwalifikowanych tancerek, które poza

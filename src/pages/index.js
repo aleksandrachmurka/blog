@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import Partners from "../components/partners"
+import Grant from "../components/grant"
 import SEO from "../components/seo"
 import { Link, useStaticQuery, graphql, navigate } from "gatsby"
 import Image from "gatsby-image"
@@ -30,7 +31,10 @@ const Main = ({ location }) => {
       <SEO title="Strona główna" />
       <div className="main-container">
         <div className="main-image">
-          <Image fluid={image} alt="placeholder" />
+          <Image
+            fluid={image}
+            alt="Woman in purple dress sitting next to the desk facing forward"
+          />
         </div>
         <div className="main-content">
           <p>Witam Cię na mojej stronie!</p>
@@ -80,6 +84,7 @@ const Main = ({ location }) => {
         </div>
       </div>
       <Partners />
+      <Grant />
     </Layout>
   )
 }

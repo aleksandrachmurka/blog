@@ -16,10 +16,15 @@ const Nav = ({ location }) => {
   `)
   const logo = data?.logo?.childImageSharp?.fixed
 
-  console.log(location)
-
-  const offerHandler = () => {
+  const offerClickHandler = () => {
     navigate("/offer", { state: { prevPath: location.pathname } })
+  }
+
+  const offerKeyHandler = event => {
+    console.log(event)
+    if (event.keyCode === 13) {
+      navigate("/offer", { state: { prevPath: location.pathname } })
+    }
   }
 
   return (
@@ -29,7 +34,13 @@ const Nav = ({ location }) => {
           <Image fixed={logo} alt="logo" className="logo" />
         </Link>
         <li>
-          <a onClick={offerHandler}>Oferta</a>
+          <a
+            onClick={offerClickHandler}
+            onKeyDown={offerKeyHandler}
+            tabIndex="0"
+          >
+            Oferta
+          </a>
         </li>
         <li>
           <Link to="/about">O mnie</Link>
