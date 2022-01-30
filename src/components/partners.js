@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
-const Partners = ({ location }) => {
+const Partners = () => {
   const data = useStaticQuery(graphql`
     query PartnerLogosQuery {
       astone: file(absolutePath: { regex: "partner-logo/astone.jpg/" }) {

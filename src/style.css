@@ -308,6 +308,16 @@ a:focus {
   transform: scale(1.2);
 }
 
+/* Grant */
+
+.grant-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4%;
+  width: 100%;
+}
+
 /* About */
 
 .about_row {
@@ -407,6 +417,11 @@ a:focus {
   display: none;
 }
 
+.ec-notice__title,
+.ec-notice__text {
+  font-family: var(--fontFamily-sans);
+}
+
 .grid__description-inner {
   font-family: var(--fontFamily-about);
   color: var(--color-text-main);
@@ -415,6 +430,10 @@ a:focus {
 a[href*="profilaktykazdrowia.pl"] {
   font-family: inherit;
   font-size: inherit;
+}
+
+.offer-image {
+  width: 100%;
 }
 
 /* Footer */
@@ -458,6 +477,8 @@ a[href*="profilaktykazdrowia.pl"] {
 .footer-links a:hover {
   transform: scale(1.5);
 }
+
+/*Blog*/
 
 .global-header {
   margin-bottom: var(--spacing-12);
@@ -582,9 +603,6 @@ a[href*="profilaktykazdrowia.pl"] {
     margin-left: 0;
   }
   .about-image {
-    width: 100%;
-  }
-  .offer-image {
     width: 100%;
   }
 }
